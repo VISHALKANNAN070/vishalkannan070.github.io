@@ -1,0 +1,195 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Theme variables */
+
+:root {
+  --bg: #f3f2ef;
+  --text: #111111;
+  --border: #c8c4c4;
+  --link: #3366cc;
+}
+
+body.dark {
+  --bg: #111;
+  --text: #e8e8e8;
+  --border: #333;
+  --link: #6ca0ff;
+}
+
+/* Base layout */
+
+body {
+  font-family: "Google Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 90vw;
+  margin: 60px auto;
+  padding: 0 20px;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+/* Header */
+
+.top-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+.role {
+  font-size: 1.1rem;
+  color: gray;
+  margin-top: 5px;
+}
+
+/* Theme toggle */
+
+#theme-toggle {
+  font-size: 1.4rem;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px 0px 0px 20px; /* fine-tune alignment */
+}
+
+/* About */
+
+.desc {
+  max-width: 80vw;
+}
+
+/* Sections */
+
+section {
+  margin: 40px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 30px 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Lists */
+
+#about ul {
+  margin-left: 20px;
+}
+
+/* Skills layout */
+
+.skills-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skills-flex article {
+  min-width: 160px;
+  flex: 1;
+  padding-left: 30px;
+}
+
+.skills-flex ul {
+  margin-left: 20px;
+}
+
+/* Projects */
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stack {
+  color: gray;
+  margin: 6px 0;
+}
+
+/* Certification & highlight lists */
+
+#certifications ul,
+#highlights ul {
+  margin-left: 20px;
+}
+
+/* Links */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* Contact links */
+
+.contact-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Copyright */
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .project-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-flex {
+    flex-direction: column;
+  }
+
+  .desc{
+    text-align: justify;
+  }
+}
