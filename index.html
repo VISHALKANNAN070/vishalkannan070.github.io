@@ -1,132 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal.</title>
 
-    <title>Vishal Kannan S I — Portfolio</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --text-main: #d4d4d4;
+      --text-muted: #888888;
+      --text-bright: #ffffff;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
 
-    <link rel="stylesheet" href="assets/style.css" />
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5; 
+    }
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    main {
+      max-width: 53ch;
+      width: 100%;
+    }
 
-    <meta
-      name="description"
-      content="Portfolio of Vishal Kannan S I — Full Stack Developer."
-    />
-  </head>
+    header {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
 
-  <body>
-    <!-- Header -->
-    <header class="top-header">
-      <div class="header-left">
-        <h1>Vishal Kannan S I</h1>
-        <p class="role">Full Stack Developer</p>
-      </div>
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-bright);
+    }
 
-      <!-- Theme toggle -->
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <img
-          src="assets/moon.svg"
-          alt="Theme icon"
-          width="20"
-          height="20"
-          id="theme-icon"
-        />
-      </button>
+    .portrait {
+      width: 88px;
+      height: 88px;
+      object-fit: cover;
+      image-rendering: pixelated;
+      filter: grayscale(100%);
+      border-radius: 2px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; 
+    }
+
+    p {
+      font-size: 1rem;
+      text-wrap : pretty;
+    }
+
+    nav {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text-bright);
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1>I'm<br>Vishal Kannan.</h1>
+      <img src="/home/nothuman/Downloads/portfolio.png" alt="Vishal" class="portrait" loading="lazy">
     </header>
+    
+    <div class="content">
+      <p>I'm a Web Developer and EEE graduate. Don't ask me why I chose that degree.</p>
+      
+      <p>A massive fan of minimal things, low-dopamine UIs. Always available for completely unnecessary debates and arguments.</p>
 
-    <main>
-      <!-- About -->
-      <section id="about">
-        <p class="desc">
-          I’m a full-stack developer with an Electrical and Electronics
-          Engineering background. I build web applications using JavaScript,
-          mainly with React, Node.js, Express.js, MongoDB, and MySQL. I enjoy
-          keeping things simple and clean, both in design and code, focusing on
-          practical and maintainable applications while improving my
-          fundamentals in algorithms, systems, and Linux.
-        </p>
+      <p>Recently engineered SyncSpace — a tool to streamline student coordination by integrating note-taking and task tracking in a single platform.</p>
+      
+      <p>And finally... <br> Use Linux. Windows is for noobs ;)</p>
+    </div>
+    
+    <nav>
+      <a href="https://github.com/VISHALKANNAN070" target="_blank">github</a>
+      <a href="mailto:vishalkannan070@gmail.com" target="blank">mail</a>
+      <a href="setup.html">setup</a>
+    </nav>
+  </main>
 
-        <h3>Areas of Interest</h3>
-
-        <ul>
-          <li>Full Stack Web Development</li>
-          <li>Open Source Contribution</li>
-          <li>Developer Tooling</li>
-          <li>Linux Systems</li>
-          <li>Backend Architecture</li>
-        </ul>
-      </section>
-
-      <hr />
-
-      <!-- Skills -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-flex" id="skills-container"></div>
-      </section>
-
-      <hr />
-
-      <!-- Projects -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div id="projects-container"></div>
-      </section>
-
-      <hr />
-
-      <!-- Education -->
-      <section id="education">
-        <h2>Education</h2>
-        <div id="education-container"></div>
-      </section>
-
-      <!-- Certifications -->
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <ul id="certifications-container"></ul>
-      </section>
-
-      <hr />
-
-      <!-- Highlights -->
-      <section id="highlights">
-        <h2>Highlights</h2>
-        <ul id="highlights-container"></ul>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <section id="contact">
-        <h2>Contact</h2>
-
-        <p class="contact-links">
-          <a href="mailto:vishalkannan070@gmail.com">Email</a>
-          <a href="https://github.com/" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-          <a
-            href="https://drive.google.com/file/d/170AWN-WJUoL7qn_3seFU1IHoKMYYmUfO/view?usp=sharing"
-            target="_blank"
-            >Resume</a
-          >
-        </p>
-      </section>
-
-      <p class="copyright">
-        © <time datetime="2026">2026</time> Vishal Kannan S I
-      </p>
-    </footer>
-
-    <script src="assets/script.js"></script>
-  </body>
+</body>
 </html>
+
