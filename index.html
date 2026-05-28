@@ -1,121 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vishal.</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vishal.</title>
 
-  <style>
-    :root {
-      --bg: #000000;
-      --text-main: #d4d4d4;
-      --text-muted: #888888;
-      --text-bright: #ffffff;
-      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
+        <style>
+            :root {
+                --bg: #000000;
+                --text-main: #d4d4d4;
+                --text-muted: #888888;
+                --text-bright: #ffffff;
+                --font-mono:
+                    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                    "Liberation Mono", "Courier New", monospace;
+            }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      font-family: var(--font-mono);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.5; 
-    }
+            body {
+                background-color: var(--bg);
+                color: var(--text-main);
+                font-family: var(--font-mono);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 2rem;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                line-height: 1.5;
+            }
 
-    main {
-      max-width: 53ch;
-      width: 100%;
-    }
+            main {
+                max-width: 53ch;
+                width: 100%;
+            }
 
-    header {
-      display: flex;
-      align-items: flex-end;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
+            header {
+                display: flex;
+                align-items: flex-end;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
 
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--text-bright);
-    }
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1.2;
+                color: var(--text-bright);
+            }
 
-    .portrait {
-      width: 88px;
-      height: 88px;
-      object-fit: cover;
-      image-rendering: pixelated;
-      filter: grayscale(100%);
-      border-radius: 2px;
-    }
+            .portrait {
+                width: 88px;
+                height: 88px;
+                object-fit: cover;
+                image-rendering: pixelated;
+                filter: grayscale(100%);
+                border-radius: 2px;
+            }
 
-    .content {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem; 
-    }
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
 
-    p {
-      font-size: 1rem;
-      text-wrap : pretty;
-    }
+            p {
+                font-size: 1rem;
+                text-wrap: pretty;
+            }
 
-    nav {
-      margin-top: 2.5rem;
-      display: flex;
-      gap: 1.5rem;
-    }
+            nav {
+                margin-top: 2.5rem;
+                display: flex;
+                gap: 1.5rem;
+            }
 
-    nav a {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+            nav a {
+                font-size: 0.95rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                transition: color 0.2s ease;
+            }
 
-    nav a:hover {
-      color: var(--text-bright);
-    }
-  </style>
-</head>
-<body>
+            nav a:hover {
+                color: var(--text-bright);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>I'm<br />Vishal Kannan.</h1>
+                <img
+                    src="./assets/portfolio.png"
+                    alt="Vishal"
+                    class="portrait"
+                    loading="lazy"
+                />
+            </header>
 
-  <main>
-    <header>
-      <h1>I'm<br>Vishal Kannan.</h1>
-      <img src="./assets/portfolio.png" alt="Vishal" class="portrait" loading="lazy">
-    </header>
-    
-    <div class="content">
-      <p>I'm a Web Developer and EEE graduate. Don't ask me why I chose that degree.</p>
-      
-      <p>A massive fan of minimal things, low-dopamine UIs. Always available for completely unnecessary debates and arguments.</p>
+            <div class="content">
+                <p>
+                    I'm a Web Developer and EEE graduate. Don't ask me why I
+                    chose that degree.
+                </p>
 
-      <p>Recently engineered SyncSpace — a tool to streamline student coordination by integrating note-taking and task tracking in a single platform.</p>
-      
-      <p>And finally... <br> Use Linux. Windows is for noobs ;)</p>
-    </div>
-    
-    <nav>
-      <a href="https://github.com/VISHALKANNAN070" target="_blank">github</a>
-      <a href="mailto:vishalkannan070@gmail.com" target="blank">mail</a>
-      <a href="./assets/setup.html">setup</a>
-    </nav>
-  </main>
+                <p>
+                    A massive fan of minimal things, low-dopamine UIs. Always
+                    available for completely unnecessary debates and arguments.
+                </p>
 
-</body>
+                <p>
+                    Recently engineered SyncSpace — a tool to streamline student
+                    coordination by integrating note-taking and task tracking in
+                    a single platform.
+                </p>
+
+                <p>
+                    And finally... <br />
+                    Use Linux. Windows is for noobs ;)
+                </p>
+            </div>
+
+            <nav>
+                <a href="https://github.com/VISHALKANNAN070" target="_blank"
+                    >github</a
+                >
+                <a href="mailto:vishalkannan070@gmail.com" target="blank"
+                    >mail</a
+                >
+                <a href="./assets/setup.html">setup</a>
+                <a href="./assets/blogs/index.html">blogs</a>
+            </nav>
+        </main>
+    </body>
 </html>
-
