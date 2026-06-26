@@ -14,39 +14,54 @@
         <main>
             <header>
                 <h1>Vishal Kannan.</h1>
-                <div class="contact">[
-                    <a href="https://github.com/VISHALKANNAN070" target="_blank" title="Github"> github </a>|
-                    <a href="https://linkedin.com/in/vishalkannan070" target="_blank" title="LinkedIn">
-                        linkedin
-                    </a>|
-                    <a href="https://x.com/nothuman070" target="_blank" title="X(Twitter)"> X </a>|
-                    <a href="mailto:vishalkannan070@gmail.com" title="Gmail"> gmail </a>
-                    ]</div>
-
+                <div class="contact">
+                    [
+                    <a
+                        href="https://github.com/VISHALKANNAN070"
+                        target="_blank"
+                        title="Github"
+                    >
+                        github </a
+                    >|
+                    <a
+                        href="https://linkedin.com/in/vishalkannan070"
+                        target="_blank"
+                        title="LinkedIn"
+                    >
+                        linkedin </a
+                    >|
+                    <a
+                        href="https://x.com/nothuman070"
+                        target="_blank"
+                        title="X(Twitter)"
+                    >
+                        X </a
+                    >|
+                    <a href="mailto:vishalkannan070@gmail.com" title="Gmail">
+                        gmail
+                    </a>
+                    ]
+                </div>
             </header>
 
             <div class="home-content">
                 <p>
                     I'm a Web Developer and EEE graduate based in Tamil Nadu,
-                    India. I build impactful web applications with React, Node.js,
-                    Express, PostgreSQL, and MongoDB, with a strong interest in
-                    backend architecture, databases, and developer-focused
-                    tools. I'm currently learning TypeScript while continuously
-                    building production-quality projects.
+                    India. I build impactful web applications with React,
+                    Node.js, Express, PostgreSQL, and MongoDB, with a strong
+                    interest in backend architecture, databases, and
+                    developer-focused tools. I'm currently learning TypeScript
+                    while continuously building production-quality projects.
                 </p>
             </div>
 
             <nav>
                 <a href="#" data-page="skills">skills</a>
                 <a href="#" data-page="projects">projects</a>
-                <a href="#" data-page="resume-not-ready-yet-sorry">resume</a>
+                <a href="#">resume</a>
             </nav>
 
             <section id="viewer"></section>
-            <script src="https://unpkg.com/lucide@latest"></script>
-            <script>
-                lucide.createIcons();
-            </script>
             <script>
                 const viewer = document.getElementById("viewer");
 
@@ -57,12 +72,12 @@
                     viewer.innerHTML = html;
                 }
 
-                document.querySelectorAll("nav a").forEach((link) => {
+                document.querySelectorAll("nav a[data-page]").forEach((link) => {
                     link.addEventListener("click", (e) => {
                         e.preventDefault();
 
                         document
-                            .querySelectorAll("nav a")
+                            .querySelectorAll("nav a[data-page]")
                             .forEach((a) => a.classList.remove("active"));
 
                         link.classList.add("active");
