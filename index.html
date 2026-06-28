@@ -3,89 +3,84 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vishal.</title>
-
-        <link rel="stylesheet" href="styles/home-style.css" />
-        <link rel="stylesheet" href="styles/skills-style.css" />
-        <link rel="stylesheet" href="styles/project-style.css" />
-        <link rel="stylesheet" href="styles/contact-style.css" />
+        <title>Vishal Kannan</title>
+        <meta
+            name="description"
+            content="Backend engineer and developer tools builder based in Tamil Nadu, India."
+        />
     </head>
     <body>
         <main>
-            <header>
-                <h1>Vishal Kannan.</h1>
-                <div class="contact">
-                    [
-                    <a
-                        href="https://github.com/VISHALKANNAN070"
-                        target="_blank"
-                        title="Github"
-                    >
-                        github </a
-                    >|
-                    <a
-                        href="https://linkedin.com/in/vishalkannan070"
-                        target="_blank"
-                        title="LinkedIn"
-                    >
-                        linkedin </a
-                    >|
-                    <a
-                        href="https://x.com/nothuman070"
-                        target="_blank"
-                        title="X(Twitter)"
-                    >
-                        X </a
-                    >|
-                    <a href="mailto:vishalkannan070@gmail.com" title="Gmail">
-                        gmail
-                    </a>
-                    ]
-                </div>
-            </header>
+            <p class="name">Vishal Kannan.</p>
 
-            <div class="home-content">
-                <p>
-                    I'm a Web Developer and EEE graduate based in Tamil Nadu,
-                    India. I build impactful web applications with React,
-                    Node.js, Express, PostgreSQL, and MongoDB, with a strong
-                    interest in backend architecture, databases, and
-                    developer-focused tools. I'm currently learning TypeScript
-                    while continuously building production-quality projects.
+            <div class="bio">
+                <p class="yr">About</p>
+                <p class="desc">
+                    Based in Tamil Nadu, India. I transitioned into software
+                    development during my EEE degree and have since been
+                    building full-stack web applications using modern web
+                    technologies. I mainly work with React, Node, Express,
+                    MongoDB, and PostgreSQL.
                 </p>
             </div>
 
-            <nav>
-                <a href="#" data-page="skills">skills</a>
-                <a href="#" data-page="projects">projects</a>
-                <a href="javascript:void(0)">resume</a>
-            </nav>
+            <div class="work">
+                <p class="yr">Projects</p>
+                <ul class="work-list">
+                    <li>
+                        <a href="https://github.com/VISHALKANNAN070/LitMap"
+                            >LitMap</a
+                        ><span class="desc">
+                            — AI research paper crawler with RAG</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/VISHALKANNAN070/SyncSpace"
+                            >SyncSpace</a
+                        ><span class="desc">
+                            — project management with AI brainstorming</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/VISHALKANNAN070/NotesApp"
+                            >NotesApp</a
+                        ><span class="desc">
+                            — secure notes with Google OAuth</span
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/ZenithTechSolutions/spark"
+                            >SPARK'25</a
+                        ><span class="desc">
+                            — international conference website</span
+                        >
+                    </li>
+                </ul>
+            </div>
 
-            <section id="viewer"></section>
-            <script>
-                const viewer = document.getElementById("viewer");
-
-                async function loadPage(page) {
-                    const response = await fetch(`pages/${page}.html`);
-                    const html = await response.text();
-
-                    viewer.innerHTML = html;
-                }
-
-                document.querySelectorAll("nav a[data-page]").forEach((link) => {
-                    link.addEventListener("click", (e) => {
-                        e.preventDefault();
-
-                        document
-                            .querySelectorAll("nav a[data-page]")
-                            .forEach((a) => a.classList.remove("active"));
-
-                        link.classList.add("active");
-
-                        loadPage(link.dataset.page);
-                    });
-                });
-            </script>
+            <div class="footer">
+                <p class="yr">Contact</p>
+                <a
+                    href="https://github.com/VISHALKANNAN070"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                ><span class="sep">|</span
+                ><a
+                    href="https://www.linkedin.com/in/vishal-kannan-070in/"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                ><span class="sep">|</span
+                ><a href="mailto:vishalkannan070@gmail.com">Gmail</a>
+                <span class="sep">|</span>
+                <a
+                    href="https://drive.google.com/file/d/1MwQfnxceUGP1OMjzBZziUsu0Qj-MLkcA/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
+                    >Resume</a
+                >
+            </div>
         </main>
     </body>
 </html>
